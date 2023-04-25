@@ -35,11 +35,11 @@ class Kernel extends HttpKernel
             StartSession::class,
             ShareErrorsFromSession::class,
             Middleware\VerifyCsrfToken::class,
-            'throttle:30,1',
+            // 'throttle:30,1',
         ],
 
         'api' => [
-            'throttle:30,1',
+            // 'throttle:30,1',
         ],
     ];
 
@@ -54,6 +54,6 @@ class Kernel extends HttpKernel
         'auth' => Middleware\Authenticate::class,
         'auth.basic' => AuthenticateWithBasicAuth::class,
         'guest' => Middleware\RedirectIfAuthenticated::class,
-        'throttle' => Middleware\ThrottleRequests::class,
+        // 'throttle' => Middleware\ThrottleRequests::class,
     ];
 }
